@@ -17,7 +17,12 @@
                                 <!-- <div class="text-center">
                                     <img src="img/avatars/avatar.jpg" alt="Charles Hall" class="img-fluid rounded-circle" width="132" height="132" />
                                 </div> -->
-                                <form>
+                                <?php
+                                    if($this->session->flashdata('err')){
+                                        echo '<p class="alert alert-warning">'.$this->session->flashdata('err').'<p>';
+                                    }
+                                ?>
+                                <form action="<?=base_url('Backend_func/login');?>" method="post">
                                     <div class="mb-3">
                                         <label class="form-label">Email</label>
                                         <input class="form-control form-control-lg" type="email" name="email" placeholder="Enter your email" />
@@ -27,17 +32,17 @@
                                         <input class="form-control form-control-lg" type="password" name="password" placeholder="Enter your password" />
                                         <small><a href="index.html">Forgot password?</a></small>
                                     </div>
-                                    <div>
+                                    <!-- <div>
                                         <label class="form-check">
                                             <input class="form-check-input" type="checkbox" value="remember-me" name="remember-me" checked>
                                             <span class="form-check-label">
                                                 Remember me next time
                                             </span>
                                         </label>
-                                    </div>
+                                    </div> -->
                                     <div class="text-center mt-3">
-                                        <a href="index.html" class="btn btn-lg btn-primary">Sign in</a>
-                                        <!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
+                                        <!-- <a href="index.html" class="btn btn-lg btn-primary">Sign in</a> -->
+                                        <button type="submit" class="btn btn-lg btn-primary">Sign in</button>
                                     </div>
                                 </form>
                             </div>

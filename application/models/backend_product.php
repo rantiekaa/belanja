@@ -58,4 +58,12 @@ class Backend_product extends CI_Model {
         $this->db->where('id_product', $id);
         $this->db->delete('product_images');
     }
+
+    public function selectByHandle($handle) {
+        $this->db->select("*");
+        $this->db->from("product");
+        $this->db->where("handle", $handle);
+        $query = $this->db->get()->row();
+        return $query;
+    }
 }

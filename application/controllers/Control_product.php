@@ -27,7 +27,7 @@ class Control_product extends CI_Controller {
 
             $config['image_library']    = 'gd2';
             $config['source_image']     = './assets/general/custom/product/'.$image['upload_data']['file_name'];
-            $config['new_image']        = './assets/general/custom/product/thumbs/';
+            $config['new_image']        = './assets/general/custom/product/';
             $config['create_thumb']     = TRUE;
             $config['maintain_ratio']   = TRUE;
             $config['width']            = 500;
@@ -64,7 +64,7 @@ class Control_product extends CI_Controller {
 
             $config['image_library']    = 'gd2';
             $config['source_image']     = './assets/general/custom/product/'.$image['upload_data']['file_name'];
-            $config['new_image']        = './assets/general/custom/product/thumbs/';
+            $config['new_image']        = './assets/general/custom/product/';
             $config['create_thumb']     = TRUE;
             $config['maintain_ratio']   = TRUE;
             $config['width']            = 500;
@@ -108,7 +108,7 @@ class Control_product extends CI_Controller {
 
             $config['image_library']    = 'gd2';
             $config['source_image']     = './assets/general/custom/product/'.$image['upload_data']['file_name'];
-            $config['new_image']        = './assets/general/custom/product/thumbs/';
+            $config['new_image']        = './assets/general/custom/product/';
             $config['create_thumb']     = TRUE;
             $config['maintain_ratio']   = TRUE;
             $config['width']            = 500;

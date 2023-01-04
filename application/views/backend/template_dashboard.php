@@ -26,22 +26,16 @@
 					</a>
 					<ul class="sidebar-nav">
 						<li class="sidebar-item <?php if($menu == 'dashboard'): ?>active<?php endif; ?>">
-							<a class="sidebar-link" href="<?=base_url()?>/backend">
+							<a class="sidebar-link" href="<?=base_url()?>backend">
 								<i class="align-middle" data-feather="sliders"></i>
 								<span class="align-middle">Dashboard</span>
-							</a>
-						</li>
-						<li class="sidebar-item <?php if($menu == 'users'): ?>active<?php endif; ?>">
-							<a class="sidebar-link" href="<?=base_url()?>backend/users">
-								<i class="align-middle" data-feather="user"></i>
-								<span class="align-middle">Users</span>
 							</a>
 						</li>
 						<li class="sidebar-header">Product</li>
 						<li class="sidebar-item <?php if($menu == 'product-lists'): ?>active<?php endif; ?>">
 							<a class="sidebar-link" href="<?=base_url()?>backend/product">
 								<i class="align-middle" data-feather="list"></i>
-								<span class="align-middle">Product</span>
+								<span class="align-middle">Products</span>
 							</a>
 						</li>
 						<!-- <li class="sidebar-item <?php if($menu == 'add-product'): ?>active<?php endif; ?>">
@@ -53,7 +47,21 @@
 						<li class="sidebar-item <?php if($menu == 'category'): ?>active<?php endif; ?>">
 							<a class="sidebar-link" href="<?=base_url()?>backend/category">
 								<i class="align-middle" data-feather="filter"></i>
-								<span class="align-middle">Category</span>
+								<span class="align-middle">Categorys</span>
+							</a>
+						</li>
+						<li class="sidebar-header">Order</li>
+						<li class="sidebar-item <?php if($menu == 'orders'): ?>active<?php endif; ?>">
+							<a class="sidebar-link" href="<?=base_url()?>backend/orders">
+								<i class="align-middle" data-feather="shopping-bag"></i>
+								<span class="align-middle">Orders</span>
+							</a>
+						</li>
+						<li class="sidebar-header">Customer</li>
+						<li class="sidebar-item <?php if($menu == 'customers'): ?>active<?php endif; ?>">
+							<a class="sidebar-link" href="<?=base_url()?>backend/customers">
+								<i class="align-middle" data-feather="user"></i>
+								<span class="align-middle">Customers</span>
 							</a>
 						</li>
 					</ul>
@@ -72,11 +80,11 @@
 								</a>
 								<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
 									<!-- <img src="img/avatars/avatar.jpg" class="avatar img-fluid rounded me-1" alt="Charles Hall" /> -->
-									<span class="text-dark">Charles Hall</span>
+									<span class="text-dark">Admin</span>
 								</a>
 								<div class="dropdown-menu dropdown-menu-end">
 									<a class="dropdown-item" href="pages-profile.html">
-										<i class="align-middle me-1" data-feather="user"></i> Profile </a>
+										<!-- <i class="align-middle me-1" data-feather="user"></i> Profile </a> -->
 									<!-- <a class="dropdown-item" href="#">
 										<i class="align-middle me-1" data-feather="pie-chart"></i> Analytics </a>
 									<div class="dropdown-divider"></div>

@@ -32,19 +32,19 @@ class Backend extends CI_Controller {
         $this->template->load('backend/template_account','backend/login', $data);
     }
 
-    public function users(){
+    public function customers(){
         $data = array(
-            'title' => 'Users',
-            'menu' => 'users',
-            'listUser' => $this->Backend_user->userList()
+            'title' => 'Customers',
+            'menu' => 'customers',
+            'listUser' => $this->Backend_user->userAll()
         );
 
-        $this->template->load('backend/template_dashboard','backend/users/user_list', $data);
+        $this->template->load('backend/template_dashboard','backend/customers/list', $data);
     }
 
     public function product(){
         $data = array(
-            'title' => 'Product',
+            'title' => 'Products',
             'menu' => 'product-lists',
             'listProduct' => $this->Backend_product->selectAll()
         );
@@ -66,15 +66,27 @@ class Backend extends CI_Controller {
         $data = array(
             'title' => 'Edit Product',
             'menu' => 'product-lists',
-            'selectProduct' => $this->Backend_product->select($id)
+            'selectProduct' => $this->Backend_product->select($id),
+            'listCategory' => $this->Backend_category->selectAll()
         );
 
         $this->template->load('backend/template_dashboard','backend/products/edit', $data);
     }
 
+    public function image_product($id){
+        $data = array(
+            'title' => 'Add Image Product',
+            'menu' => 'product-lists',
+            'selectProduct' => $this->Backend_product->select($id),
+            'productImage' => $this->Backend_product->selectAllImage()
+        );
+
+        $this->template->load('backend/template_dashboard','backend/products/image', $data);
+    }
+
     public function category(){
         $data = array(
-            'title' => 'Category',
+            'title' => 'Categorys',
             'menu' => 'category',
             'listCategory' => $this->Backend_category->selectAll()
         );
@@ -99,5 +111,15 @@ class Backend extends CI_Controller {
         );
 
         $this->template->load('backend/template_dashboard','backend/categorys/edit', $data);
+    }
+
+    public function orders(){
+        $data = array(
+            'title' => 'Orders',
+            'menu' => 'orders',
+            'listUser' => $this->Backend_user->userList()
+        );
+
+        $this->template->load('backend/template_dashboard','backend/orders/list', $data);
     }
 }

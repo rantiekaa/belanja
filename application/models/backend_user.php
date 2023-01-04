@@ -7,7 +7,7 @@ class Backend_user extends CI_Model {
         $this->load->database();
     }
 
-    public function userList(){
+    public function userAll(){
         $this->db->select("*");
         $this->db->from("users");
         $this->db->where("role", 2);

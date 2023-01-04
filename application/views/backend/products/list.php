@@ -16,7 +16,7 @@
                 <table id="table_id" class="display">
                     <thead>
                         <tr>
-                            <th>Image</th>
+                            <th style="width: 10%;">Image</th>
                             <th>Product Name</th>
                             <th>Status</th>
                             <th>Stock</th>
@@ -39,15 +39,27 @@
                                     </div>
                                 </td>
                                 <td><?=$value['title'];?></td>
-                                <td><?=$value['status'];?></td>
+                                <td>
+                                    <?php
+                                        if($value['status'] == 1){
+                                            echo '<span class="badge bg-success w-100">Active</span>';
+                                        }
+                                        else{
+                                            echo '<span class="badge bg-secondary w-100">Draft</span>';
+                                        }
+                                    ?>
+                                </td>
                                 <td><?=$value['stock'];?></td>
                                 <td><?=$category;?></td>
                                 <td>
                                     <div class="d-flex gap-2">
-                                        <a class="btn btn-warning d-block" href="<?=base_url()?>backend/edit_product/<?=$value['id']?>">
-                                            <i class="align-middle text-white" data-feather="edit"></i>
+                                        <a class="btn btn-success d-block" href="<?=base_url()?>backend/image_product/<?=$value['id']?>">
+                                            <i class="align-middle text-white" data-feather="image"></i>
                                         </a>
-                                        <a class="btn btn-danger d-block" href="<?=base_url()?>control_product/delete_product/<?=$value['id']?>">
+                                        <a class="btn btn-info d-block" href="<?=base_url()?>backend/edit_product/<?=$value['id']?>">
+                                            <i class="align-middle text-white" data-feather="eye"></i>
+                                        </a>
+                                        <a class="btn btn-danger d-block" href="<?=base_url()?>control_product/delete_product/<?=$value['id']?>" onclick="return confirm('Are you sure?')">
                                             <i class="align-middle text-white" data-feather="delete"></i>
                                         </a>
                                     </div>

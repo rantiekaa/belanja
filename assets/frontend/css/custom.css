@@ -18,3 +18,11 @@
 .arrow-slick1 {
 	color: rgba(255, 252, 252, 0.60) !important;
 }
+
+.wrap-menu-desktop{
+	top: 0px;
+}
+
+.fix-menu-desktop .menu-account i{
+	color: #343a40!important;
+}

@@ -34,7 +34,7 @@
 								<tr>
 									<td>
 										<div style="max-width: 100px;">
-											<img src="<?=base_url("/assets/general/custom/product/".$value['image'])?>" alt="" width="100%">
+											<img src="<?=base_url("/assets/general/custom/product/thumbs/".$value['image'])?>" alt="" width="100%">
 										</div>
 									</td>
 									<td><?=$value['title'];?></td>
@@ -54,7 +54,10 @@
 											<a class="btn btn-success d-block" href="<?=base_url()?>backend/image_product/<?=$value['id']?>">
 												<i class="align-middle text-white" data-feather="image"></i>
 											</a>
-											<a class="btn btn-info d-block" href="<?=base_url()?>backend/edit_product/<?=$value['id']?>">
+											<a class="btn btn-warning d-block" href="<?=base_url()?>backend/edit_product/<?=$value['id']?>">
+												<i class="align-middle text-white" data-feather="edit"></i>
+											</a>
+											<a class="btn btn-info d-block" href="<?=base_url()?>product/?find=<?=$value['handle'];?>" target="_blank">
 												<i class="align-middle text-white" data-feather="eye"></i>
 											</a>
 											<a class="btn btn-danger d-block" href="<?=base_url()?>control_product/delete_product/<?=$value['id']?>" onclick="return confirm('Are you sure?')">

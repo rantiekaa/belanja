@@ -32,6 +32,9 @@
                                         <a class="btn btn-warning d-block" href="<?=base_url()?>backend/edit_category/<?=$value['id']?>">
                                             <i class="align-middle text-white" data-feather="edit"></i>
                                         </a>
+                                        <a class="btn btn-info d-block" href="<?=base_url()?>category/?find=<?=$value['handle'];?>" target="_blank">
+                                            <i class="align-middle text-white" data-feather="eye"></i>
+                                        </a>
                                         <a class="btn btn-danger d-block" href="<?=base_url()?>control_category/delete_category/<?=$value['id']?>" onclick="return confirm('Are you sure?')">
                                             <i class="align-middle text-white" data-feather="delete"></i>
                                         </a>

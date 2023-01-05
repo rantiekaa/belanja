@@ -37,4 +37,12 @@ class Backend_category extends CI_Model {
         $query = $this->db->get()->row();
         return $query;
     }
+
+    public function selectByHandle($handle){
+        $this->db->select("*");
+        $this->db->from("category");
+        $this->db->where("handle", $handle);
+        $query = $this->db->get()->row();
+        return $query;
+    }
 }

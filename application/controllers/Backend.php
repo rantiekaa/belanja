@@ -117,7 +117,7 @@ class Backend extends CI_Controller {
         $data = array(
             'title' => 'Orders',
             'menu' => 'orders',
-            'listUser' => $this->Backend_user->userList()
+            'listUser' => $this->Backend_user->userAll()
         );
 
         $this->template->load('backend/template_dashboard','backend/orders/list', $data);

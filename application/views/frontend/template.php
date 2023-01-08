@@ -34,35 +34,35 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a class="text-white" href="index.html">Home</a>
+								<a class="text-dark" href="index.html">Home</a>
 							</li>
 							<li>
-								<a class="text-white" href="product.html">Shop</a>
+								<a class="text-dark" href="product.html">Shop</a>
 							</li>
 							<li class="label1" data-label1="hot">
-								<a class="text-white" href="shoping-cart.html">Features</a>
+								<a class="text-dark" href="shoping-cart.html">Features</a>
 							</li>
 							<li>
-								<a class="text-white" href="blog.html">Blog</a>
+								<a class="text-dark" href="blog.html">Blog</a>
 							</li>
 							<li>
-								<a class="text-white" href="about.html">About</a>
+								<a class="text-dark" href="about.html">About</a>
 							</li>
 							<li>
-								<a class="text-white" href="contact.html">Contact</a>
+								<a class="text-dark" href="contact.html">Contact</a>
 							</li>
 						</ul>
 					</div>
 					<div class="wrap-icon-header flex-w flex-r-m">
-						<div class="icon-header-item text-white hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
+						<div class="icon-header-item hov-cl1 trans-04 p-l-22 p-r-11 text-dark js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
-						<div class="icon-header-item text-white hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="2">
+						<div class="icon-header-item hov-cl1 trans-04 p-l-22 p-r-11 text-dark icon-header-noti js-show-cart" data-notify="2">
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
-						<div class="icon-header-item text-white hov-cl1 trans-04 p-l-22 p-r-11">
+						<div class="icon-header-item hov-cl1 trans-04 p-l-22 p-r-11">
 							<a href="<?=base_url("account")?>" class="menu-account">
-								<i class="zmdi zmdi-account text-white"></i>
+								<i class="zmdi zmdi-account text-dark"></i>
 							</a>
 						</div>
 					</div>
@@ -213,26 +213,9 @@
 	</div>
 	<?= $contents; ?>
 	<!-- Footer -->
-	<footer class="bg3 p-t-75 p-b-32">
+	<footer class="bg3 p-b-32">
 		<div class="container">
 			<div class="p-t-40">
-				<div class="flex-c-m flex-w p-b-18">
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-01.png" alt="ICON-PAY">
-					</a>
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-02.png" alt="ICON-PAY">
-					</a>
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-03.png" alt="ICON-PAY">
-					</a>
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-04.png" alt="ICON-PAY">
-					</a>
-					<a href="#" class="m-all-1">
-						<img src="images/icons/icon-pay-05.png" alt="ICON-PAY">
-					</a>
-				</div>
 				<p class="stext-107 cl6 txt-center">
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> Copyright &copy; <script>
 						document.write(new Date().getFullYear());

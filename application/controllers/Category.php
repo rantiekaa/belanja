@@ -14,8 +14,10 @@ class Category extends CI_Controller {
         $obj = $this->Backend_category->selectByHandle($_GET['find']);
         $data = array(
             'title' => 'Belanja - '.$obj->title,
-            'category' => $this->Backend_category->selectByHandle($_GET['find'])
+            'titleCategories' => $obj->title,
+            'category' => $this->Backend_category->selectByHandle($_GET['find']),
+            'listProduct' => $this->Backend_product->selectByCategory($obj->id)
         );
-        $this->template->load('frontend/template','frontend/categorys/index', $data);
+        $this->template->load('frontend/template-general','frontend/categorys/index', $data);
 	}
 }

@@ -66,4 +66,22 @@ class Backend_product extends CI_Model {
         $query = $this->db->get()->row();
         return $query;
     }
+
+    public function selectByCategory($id){
+        $this->db->select("*");
+        $this->db->from("product");
+        $this->db->where("category", $id);
+        $this->db->order_by("id", "desc");
+        $query = $this->db->get()->result_array();
+        return $query;
+    }
+
+    public function selectProductDetail($handle){
+        $this->db->select("*");
+        $this->db->from("product");
+        $this->db->where("handle", $handle);
+        $this->db->order_by("id", "desc");
+        $query = $this->db->get()->result_array();
+        return $query;
+    }
 }

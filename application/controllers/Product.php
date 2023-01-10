@@ -12,10 +12,12 @@ class Product extends CI_Controller {
 
 	public function index(){
         $obj = $this->Backend_product->selectByHandle($_GET['find']);
+        $handle = $this->Backend_product->selectProductDetail($_GET['find']);
         $data = array(
             'title' => 'Belanja - '.$obj->title,
-            'product' => $this->Backend_product->selectByHandle($_GET['find'])
+            'product' => $this->Backend_product->selectByHandle($_GET['find']),
+            'listProduct' => $this->Backend_product->selectProductDetail($_GET['find'])
         );
-        $this->template->load('frontend/template','frontend/product/index', $data);
+        $this->template->load('frontend/template-general','frontend/product/index', $data);
 	}
 }

@@ -13,6 +13,17 @@
 	object-fit: cover;
 }
 
+.product-detail-image {
+	height: 400px;
+	object-fit: cover;
+}
+
 .wrap-menu-desktop{
 	top: 0px !important;
+}
+
+/* content */
+.content-wrap {
+	margin-top: 60px;
+	padding-top: 30px;
 }

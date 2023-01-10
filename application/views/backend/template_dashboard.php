@@ -47,7 +47,7 @@
 						<li class="sidebar-item <?php if($menu == 'category'): ?>active<?php endif; ?>">
 							<a class="sidebar-link" href="<?=base_url()?>backend/category">
 								<i class="align-middle" data-feather="filter"></i>
-								<span class="align-middle">Categorys</span>
+								<span class="align-middle">Categories</span>
 							</a>
 						</li>
 						<li class="sidebar-header">Order</li>

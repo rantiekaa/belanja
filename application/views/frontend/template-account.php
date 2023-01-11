@@ -20,11 +20,18 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/vendor/perfect-scrollbar/perfect-scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/util.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/custom2.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/main.css">
-	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>assets/frontend/css/custom2.css">
 </head>
 
-<body class="animsition">
+<style>
+    .not-home .wrap-menu-desktop {
+        position: sticky;
+        top: 0;
+    }
+</style>
+
+<body class="animsition not-home">
 	<header>
 		<div class="container-menu-desktop">
 			<div class="wrap-menu-desktop">
@@ -58,11 +65,11 @@
 						<div class="icon-header-item hov-cl1 trans-04 p-l-22 p-r-11 text-dark js-show-modal-search">
 							<i class="zmdi zmdi-search"></i>
 						</div>
-						<div class="icon-header-item hov-cl1 trans-04 p-l-22 p-r-11 text-dark icon-header-noti js-show-cart" data-notify="<?= count($this->cart->contents()); ?>">
+						<div class="icon-header-item hov-cl1 trans-04 p-l-22 p-r-11 text-dark icon-header-noti js-show-cart" data-notify="2">
 							<i class="zmdi zmdi-shopping-cart"></i>
 						</div>
 						<div class="icon-header-item hov-cl1 trans-04 p-l-22 p-r-11">
-							<a href="<?= base_url("account") ?>" class="menu-account">
+							<a href="<?=base_url("account")?>" class="menu-account">
 								<i class="zmdi zmdi-account text-dark"></i>
 							</a>
 						</div>
@@ -83,10 +90,10 @@
 				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
 					<i class="zmdi zmdi-search"></i>
 				</div>
-				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="<?= count($this->cart->contents()); ?>">
+				<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="2">
 					<i class="zmdi zmdi-shopping-cart"></i>
 				</div>
-				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="<?= count($this->cart->contents()); ?>">
+				<a href="#" class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti" data-notify="0">
 					<i class="zmdi zmdi-favorite-outline"></i>
 				</a>
 			</div>
@@ -163,7 +170,6 @@
 		</div>
 	</header>
 	<!-- Cart -->
-
 	<div class="wrap-header-cart js-panel-cart">
 		<div class="s-full js-hide-cart"></div>
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
@@ -175,58 +181,54 @@
 			</div>
 			<div class="header-cart-content flex-w js-pscroll">
 				<ul class="header-cart-wrapitem w-full">
-					<?php
-					$cart = $this->cart->contents();
-					if (empty($cart)) {
-					?>
-						<p class="text-center text-dark stext-115 text-white mb-4 font-400">Empty cart</p>
-						<?php
-					} else {
-						foreach ($cart as $key => $item) {
-							$product = $this->Backend_product->select($item['id']);
-						?>
-							<li class="header-cart-item flex-w flex-t m-b-12">
-								<div class="header-cart-item-img">
-									<img src="<?= base_url("/assets/general/custom/product/" . $product->image) ?>" alt="IMG">
-								</div>
-								<div class="header-cart-item-txt p-t-8">
-									<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04"><?= $item['name'] ?></a>
-									<span class="header-cart-item-info"><?= $item['qty'] ?> x Rp. <?= number_format($item['price']) ?> </span>
-								</div>
-							</li>
-					<?php
-						}
-					}
-					?>
-				</ul>
-				<?php
-				if (!empty($cart)) {
-				?>
-					<div class="w-full">
-						<div class="header-cart-total w-full p-tb-40">Total: Rp. <?= number_format($this->cart->total()); ?></div>
-						<div class="header-cart-buttons flex-w w-full">
-							<a href="<?= base_url("cart"); ?>" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"> View Cart </a>
-							<a href="<?= base_url("checkout") ?>" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"> Check Out </a>
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img src="images/item-cart-01.jpg" alt="IMG">
 						</div>
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04"> White Shirt Pleat </a>
+							<span class="header-cart-item-info"> 1 x $19.00 </span>
+						</div>
+					</li>
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img src="images/item-cart-02.jpg" alt="IMG">
+						</div>
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04"> Converse All Star </a>
+							<span class="header-cart-item-info"> 1 x $39.00 </span>
+						</div>
+					</li>
+					<li class="header-cart-item flex-w flex-t m-b-12">
+						<div class="header-cart-item-img">
+							<img src="images/item-cart-03.jpg" alt="IMG">
+						</div>
+						<div class="header-cart-item-txt p-t-8">
+							<a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04"> Nixon Porter Leather </a>
+							<span class="header-cart-item-info"> 1 x $17.00 </span>
+						</div>
+					</li>
+				</ul>
+				<div class="w-full">
+					<div class="header-cart-total w-full p-tb-40"> Total: $75.00 </div>
+					<div class="header-cart-buttons flex-w w-full">
+						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10"> View Cart </a>
+						<a href="shoping-cart.html" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10"> Check Out </a>
 					</div>
-				<?php
-				}
-				?>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="position-relative">
-		<?= $contents; ?>
-	</div>
+	<?= $contents; ?>
 	<!-- Footer -->
 	<footer class="bg3 p-b-32">
 		<div class="container">
 			<div class="p-t-40">
 				<p class="stext-107 cl6 txt-center">
-					Copyright &copy; <script>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> Copyright &copy; <script>
 						document.write(new Date().getFullYear());
 					</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 				</p>
 			</div>
 		</div>

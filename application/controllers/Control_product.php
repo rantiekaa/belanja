@@ -10,6 +10,19 @@ class Control_product extends CI_Controller
 		$this->load->library('session');
 	}
 
+	public function generateHandle($handle){
+		$hitung = count($this->Backend_product->selectProductDetail($handle));
+		$changeHandle = $handle;
+		$i = 1;
+		while ($hitung > 0) {
+			$changeHandle = $handle."-$i";
+			$hitung = count($this->Backend_product->selectProductDetail($changeHandle));
+			$i++;
+		}
+
+		return $changeHandle;
+	}
+
 	public function add_product()
 	{
 		extract($_POST);
@@ -40,7 +53,7 @@ class Control_product extends CI_Controller
 			$this->image_lib->resize();
 
 			$data = $_POST + array(
-				'handle' => url_title($title, 'dash', TRUE),
+				'handle' => $this->generateHandle(url_title($title, 'dash', TRUE)),
 				'image' => $image['upload_data']['file_name'],
 				'create_at' => date("Y-m-d H:i:s")
 			);
@@ -78,7 +91,7 @@ class Control_product extends CI_Controller
 			$this->image_lib->resize();
 
 			$imageEdit = array(
-				'handle' => url_title($title, 'dash', TRUE),
+				'handle' => $this->generateHandle(url_title($title, 'dash', TRUE)),
 				'image' => $image['upload_data']['file_name']
 			);
 		}

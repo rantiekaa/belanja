@@ -41,23 +41,46 @@
 					</div>
 					<div class="col-md-6 col-lg-5 p-b-30">
 						<div class="p-r-50 p-t-5 p-lr-0-lg">
+							<?php
+								if($this->session->flashdata('success')){
+									echo '<p class="bg-success stext-115 text-white mb-4 font-400 px-3 py-1">'.$this->session->flashdata('success').'</p>';
+							?>
+								<script>
+									setTimeout(() => {
+										$(".js-show-cart").trigger("click")
+									}, 1000);
+								</script>
+							<?php
+								}
+
+								if($this->session->flashdata('err')){
+									echo '<p class="bg-danger stext-115 text-white mb-4 font-400 px-3 py-1">'.$this->session->flashdata('err').'</p>';
+								}
+							?>
 							<h4 class="mtext-105 cl2 js-name-detail p-b-14"><?=$value['title']?></h4>
-							<span class="mtext-106 cl2">Rp. <?=number_format($value ['price'])?></span>
-							<p class="stext-102 cl3 p-t-23"><?=$value['content']?></p>
-							<div class="mt-4 respon6-next">
-								<div class="wrap-num-product flex-w m-r-20 m-tb-10 mb-3">
-									<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
-										<i class="fs-16 zmdi zmdi-minus"></i>
+							<form action="<?=base_url("product/add");?>" method="post">
+								<input type="hidden" name="handle" value="<?=$value['handle'];?>">
+								<input type="hidden" name="id" value="<?=$value['id'];?>">
+								<input type="hidden" name="price" value="<?=$value['price'];?>">
+								<input type="hidden" name="name" value="<?=$value['title'];?>">
+								<span class="mtext-106 cl2">Rp. <?=number_format($value ['price'])?></span>
+								<p class="stext-102 cl3 p-t-23"><?=$value['content']?></p>
+								<div class="mt-4 respon6-next">
+									<div class="wrap-num-product flex-w m-r-20 m-tb-10 mb-3">
+										<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+											<i class="fs-16 zmdi zmdi-minus"></i>
+										</div>
+										<input class="mtext-104 cl3 txt-center num-product" type="number" name="qty" value="1" min="1">
+										<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+											<i class="fs-16 zmdi zmdi-plus"></i>
+										</div>
 									</div>
-									<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
-									<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
-										<i class="fs-16 zmdi zmdi-plus"></i>
-									</div>
+									<button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+										Add to cart
+									</button>
 								</div>
-								<button class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-									Add to cart
-								</button>
-							</div>
+							</form>
+
 							<div class="flex-w flex-m mt-5 respon7">
 								<div class="flex-m bor9 p-r-10 m-r-11">
 									<a href="#" class="fs-14 cl3 hov-cl1 trans-04 lh-10 p-lr-5 p-tb-2 js-addwish-detail tooltip100" data-tooltip="Add to Wishlist">

@@ -61,9 +61,9 @@
       <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
         <div class="block1 wrap-pic-w">
           <img src="<?=base_url()?>assets/frontend/images/products/woman-product-bag.jpg" alt="img-woman-product">
-          <a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+          <a href="<?=base_url("category/?find=women")?>" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
             <div class="block1-txt-child1 flex-col-l">
-              <span class="block1-name ltext-102 trans-04 text-dark p-b-8">Women</span>
+              <span class="block1-name ltext-102 trans-04 p-b-8">Women</span>
             </div>
             <div class="block1-txt-child2 p-b-4 trans-05">
               <div class="block1-link stext-101 cl0 trans-09"> Shop Now </div>
@@ -74,7 +74,7 @@
       <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
         <div class="block1 wrap-pic-w">
         <img src="<?=base_url()?>assets/frontend/images/products/man-product-shoes.jpg" alt="img-man-product">
-          <a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+          <a href="<?=base_url("category/?find=men")?>" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
             <div class="block1-txt-child1 flex-col-l">
               <span class="block1-name ltext-102 trans-04 p-b-8">Men</span>
             </div>
@@ -87,7 +87,7 @@
       <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
         <div class="block1 wrap-pic-w">
         <img src="<?=base_url()?>assets/frontend/images/products/multi-product.jpg" alt="img-collectiom">
-          <a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+          <a href="<?=base_url("category/?find=accessories")?>" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
             <div class="block1-txt-child1 flex-col-l">
               <span class="block1-name ltext-102 trans-04 p-b-8">Accessories</span>
             </div>
@@ -238,7 +238,7 @@
             </div>
             <div class="block2-txt flex-w flex-t p-t-14">
               <div class="block2-txt-child1 flex-col-l ">
-                <a href="<?=base_url("product/".$value['handle'])?>" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"><?=$value['title']?></a>
+                <a href="<?=base_url("product/?find=".$value['handle'])?>" class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6"><?=$value['title']?></a>
                 <span class="stext-105 cl3">Rp. <?=number_format($value ['price'])?></span>
               </div>
             </div>

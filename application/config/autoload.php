@@ -58,7 +58,7 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('Template', 'database', 'form_validation', 'session', 'user_agent', 'lib_backendUser');
+$autoload['libraries'] = array('cart', 'Template', 'database', 'form_validation', 'session', 'user_agent', 'General', 'Phpmailer_lib');
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('Backend_user', 'Backend_category', 'Backend_product');
+$autoload['model'] = array('Backend_user', 'Backend_category', 'Backend_product', 'Frontend_user');

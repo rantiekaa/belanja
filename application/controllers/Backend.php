@@ -86,7 +86,7 @@ class Backend extends CI_Controller {
 
     public function category(){
         $data = array(
-            'title' => 'Categorys',
+            'title' => 'Categories',
             'menu' => 'category',
             'listCategory' => $this->Backend_category->selectAll()
         );

@@ -12,6 +12,11 @@ class Category extends CI_Controller {
 
 	public function index(){
         $obj = $this->Backend_category->selectByHandle($_GET['find']);
+
+        if($obj == NULL){
+            redirect(base_url());
+        }
+        
         $data = array(
             'title' => 'Belanja - '.$obj->title,
             'titleCategories' => $obj->title,

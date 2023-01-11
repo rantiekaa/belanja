@@ -34,7 +34,7 @@
 								<tr>
 									<td>
 										<div style="max-width: 100px;">
-											<img src="<?=base_url("/assets/general/custom/product/thumbs/".$value['image'])?>" alt="" width="100%">
+											<img src="<?=base_url("/assets/general/custom/product/".$value['image'])?>" alt="" width="100%">
 										</div>
 									</td>
 									<td><?=$value['title'];?></td>

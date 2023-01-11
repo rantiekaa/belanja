@@ -1,0 +1,35 @@
+label, a {
+    font-family: Poppins-Regular;
+}
+.content-to-account {
+    max-width: 600px;
+}
+.content-to-account,
+section.myaccount{
+    margin: 150px auto 150px;
+}
+.PageHeader{
+    margin-bottom: 30px;
+}
+.cart-template{
+    margin-top: 80px;
+}
+.EmptyState {
+    margin: 250px 0;
+}
+.checkout-template {
+    background: linear-gradient(90deg, #fafafa 61%, #f3f3f3 60%);
+}
+.checkout-logo {
+    max-width: 100px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.bg-item {
+    background-color: #f3f3f3;
+    border-left: 1px solid #cdcdcd;
+}
+.divider{
+    border-bottom: 1px solid #cdcdcd;
+}

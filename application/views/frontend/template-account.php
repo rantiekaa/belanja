@@ -42,22 +42,16 @@
 					<div class="menu-desktop">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a class="text-dark" href="index.html">Home</a>
+								<a class="text-dark" href="<?= base_url() ?>">Home</a>
 							</li>
 							<li>
-								<a class="text-dark" href="product.html">Shop</a>
+								<a class="text-dark" href="<?=base_url("category/?find=women")?>">Women</a>
+							</li>
+							<li>
+								<a class="text-dark" href="<?=base_url("category/?find=mens")?>">Mens</a>
 							</li>
 							<li class="label1" data-label1="hot">
-								<a class="text-dark" href="shoping-cart.html">Features</a>
-							</li>
-							<li>
-								<a class="text-dark" href="blog.html">Blog</a>
-							</li>
-							<li>
-								<a class="text-dark" href="about.html">About</a>
-							</li>
-							<li>
-								<a class="text-dark" href="contact.html">Contact</a>
+								<a class="text-dark" href="<?=base_url("category/?find=accessories")?>">Accessories</a>
 							</li>
 						</ul>
 					</div>
@@ -106,51 +100,18 @@
 		</div>
 		<!-- Menu Mobile -->
 		<div class="menu-mobile">
-			<ul class="topbar-mobile">
-				<li>
-					<div class="left-top-bar"> Free shipping for standard order over $100 </div>
-				</li>
-				<li>
-					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m p-lr-10 trans-04"> Help & FAQs </a>
-						<a href="#" class="flex-c-m p-lr-10 trans-04"> My Account </a>
-						<a href="#" class="flex-c-m p-lr-10 trans-04"> EN </a>
-						<a href="#" class="flex-c-m p-lr-10 trans-04"> USD </a>
-					</div>
-				</li>
-			</ul>
 			<ul class="main-menu-m">
 				<li>
-					<a href="index.html">Home</a>
-					<ul class="sub-menu-m">
-						<li>
-							<a href="index.html">Homepage 1</a>
-						</li>
-						<li>
-							<a href="home-02.html">Homepage 2</a>
-						</li>
-						<li>
-							<a href="home-03.html">Homepage 3</a>
-						</li>
-					</ul>
-					<span class="arrow-main-menu-m">
-						<i class="fa fa-angle-right" aria-hidden="true"></i>
-					</span>
+					<a href="<?= base_url() ?>">Home</a>
 				</li>
 				<li>
-					<a href="product.html">Shop</a>
+					<a class="text-dark" href="<?=base_url("category/?find=women")?>">Women</a>
 				</li>
 				<li>
-					<a href="shoping-cart.html" class="label1 rs1" data-label1="hot">Features</a>
+					<a class="text-dark" href="<?=base_url("category/?find=mens")?>">Mens</a>
 				</li>
-				<li>
-					<a href="blog.html">Blog</a>
-				</li>
-				<li>
-					<a href="about.html">About</a>
-				</li>
-				<li>
-					<a href="contact.html">Contact</a>
+				<li class="label1" data-label1="hot">
+					<a class="text-dark" href="<?=base_url("category/?find=accessories")?>">Accessories</a>
 				</li>
 			</ul>
 		</div>
@@ -225,10 +186,9 @@
 		<div class="container">
 			<div class="p-t-40">
 				<p class="stext-107 cl6 txt-center">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> Copyright &copy; <script>
-						document.write(new Date().getFullYear());
-					</script> All rights reserved | Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> &amp; distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Copyright &copy;
+						<script> document.write(new Date().getFullYear());</script> 
+						Belanja
 				</p>
 			</div>
 		</div>

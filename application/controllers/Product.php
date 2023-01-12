@@ -14,7 +14,6 @@ class Product extends CI_Controller {
         }
         else{
             $obj = $this->Backend_product->selectByHandle($_GET['find']);
-            $handle = $this->Backend_product->selectProductDetail($_GET['find']);
             $data = array(
                 'title' => 'Belanja - '.$obj->title,
                 'product' => $this->Backend_product->selectByHandle($_GET['find']),

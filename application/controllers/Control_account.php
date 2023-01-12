@@ -62,7 +62,7 @@ class Control_account extends CI_Controller {
 
         if($login == NULL){
             $this->session->set_flashdata('err', 'Email and Password does not match.');
-            redirect(base_url('account'));
+            redirect(base_url('account/?redirect='.$redirect));
         }
         else{
             $this->session->set_userdata('customer', $login);
